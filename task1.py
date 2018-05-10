@@ -23,13 +23,26 @@
 ===================================================
 """
 
-# Write your functions here
+inp = input('Tekst koji treba da se kodira:\n')
+inp = inp.lower()
 
+key = int(input('Unijeti broj koji zelimo da koristimo od 7 do 31:\n'))
+def rot13(input,key):
+    if key > 31:
+        key = 31
+    elif key < 7:
+        key = 7
+    finaltext = ''
+    for rijec in input:
+        if rijec.isalpha():
+            num = ord(rijec)
+            if (num + key) > 122:
+                x = (num + key) - 122
+                finaltext += chr(x + ord('a') - 1)
+            elif((num + key <= 122)):
+                finaltext += chr(num + key)
+        else:
+            finaltext += rijec
+    print(finaltext)
 
-
-def main():
-    # Test your functions here
-    pass
-
-if __name__ == "__main__":
-    main()
+rot13(inp,key)

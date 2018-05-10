@@ -1,7 +1,7 @@
 # Midterm-Exam-2
 
-Name:
+Name: Aleksa 
 
-Surname:
+Surname: Bigovic
 
-Index #:
+Index #: 17/070e
